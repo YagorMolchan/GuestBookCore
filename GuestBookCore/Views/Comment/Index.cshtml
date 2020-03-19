@@ -1,0 +1,14 @@
+﻿@model IEnumerable<GuestBookCore.Models.Entities.Comment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Гостевая книга</h1>
+<a asp-controller="Comment" asp-action="Create">Добавить комментарий</a>
+<ul>
+    @foreach (var item in Model)
+    {
+        @await Html.PartialAsync("_CommentPartial", item)
+    }
+</ul>

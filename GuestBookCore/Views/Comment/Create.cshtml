@@ -1,0 +1,23 @@
+﻿@model GuestBookCore.Models.ViewModels.CommentViewModel
+
+@*@{
+    ViewData["Title"] = "Create";
+}*@
+
+    <form asp-controller="Comment" asp-action="Create">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label asp-for="Username"></label>
+            <input asp-for="Username" />
+            <div><span asp-validation-for="Username"></span></div>
+        </div>
+        <div>
+            <label asp-for="Text"></label>
+            <input asp-for="Text" />
+            <div><span asp-validation-for="Text"></span></div>
+        </div>
+        <div>
+            <input type="submit" value="Добавить" />
+        </div>
+    </form>
+
